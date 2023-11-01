@@ -1,7 +1,19 @@
-const generateWolofLoremIpsum = require('../index');
+import { generateWolofLoremIpsum } from 'wolof-ipsum';
+import wolofWordsData from '../wolof-words.json';
 
-test('generateWolofLoremIpsum generates a paragraph with the correct number of words', () => {
-  const lorem = generateWolofLoremIpsum(1, 10);
-  const words = lorem.split(' ');
-  expect(words.length).toBe(10);
+describe('generateWolofLoremIpsum', () => {
+  const wolofWords = wolofWordsData.wolofWords.map((word) =>
+    word.toLowerCase(),
+  );
+
+  it('should generate a valid Wolof Lorem Ipsum', () => {
+    const loremIpsum = generateWolofLoremIpsum(2, 5);
+    const lowerCaseLoremIpsum = loremIpsum.toLowerCase();
+
+    const words = lowerCaseLoremIpsum.split(' ');
+    words.forEach((word) => {
+      const trimmedWord = word.trim();
+      expect(wolofWords).toContain(trimmedWord);
+    });
+  });
 });

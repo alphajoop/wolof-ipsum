@@ -1,30 +1,7 @@
-function generateWolofLoremIpsum(paragraphs, wordsPerParagraph) {
-  const wolofWords = [
-    'baay',
-    'ñoom',
-    'soppi',
-    'jàmm',
-    'bëgg',
-    'nopp',
-    'xalis',
-    'liggey',
-    'noppal',
-    'rëpp',
-    'kanam',
-    'jàng',
-    'set',
-    'ndey',
-    'def',
-    'goor',
-    'sëriñ',
-    'dëkk',
-    'jël',
-    'nopp',
-    'yàlla',
-    'wone',
-    'bët',
-    'nël',
-  ];
+import wolofWordsData from './wolof-words.json';
+
+export function generateWolofLoremIpsum(paragraphs, wordsPerParagraph) {
+  const wolofWords = wolofWordsData.wolofWords;
 
   let wolofIpsum = '';
 
@@ -47,5 +24,3 @@ function generateWolofLoremIpsum(paragraphs, wordsPerParagraph) {
 
   return wolofIpsum.trim();
 }
-
-module.exports = generateWolofLoremIpsum;

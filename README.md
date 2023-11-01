@@ -13,14 +13,13 @@ npm install wolof-ipsum
 
 Here's how you can use this package in your JavaScript project:
 
-const generateWolofLoremIpsum = require('wolof-ipsum');
+```javascript
+import { generateWolofLoremIpsum } from 'wolof-ipsum';
 
 // Generate a paragraph of 3 sentences, each sentence containing 50 words
 const lorem = generateWolofLoremIpsum(3, 50);
 
 console.log(lorem);
-
-Calling generateWolofLoremIpsum(paragraphs, wordsPerParagraph) will return a Lorem Ipsum text in Wolof with the specified number of paragraphs and words per paragraph.
 
 ## Contribution
 
