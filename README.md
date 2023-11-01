@@ -21,6 +21,8 @@ const lorem = generateWolofLoremIpsum(3, 50);
 
 console.log(lorem);
 
+```
+
 ## Contribution
 
 We encourage contributions to this project. If you'd like to contribute, you can open issues, send pull requests, or improve the documentation.
